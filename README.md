@@ -1,3 +1,4 @@
+[![Codeship Status for mimzys/book-reviews](https://app.codeship.com/projects/e1780000-009e-0137-7a26-7aac10a714af/status?branch=master)](/projects/324697)
 # README
 
 Description:
