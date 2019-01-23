@@ -35,3 +35,639 @@ Migrating to DeviseCreateUsers (20190122163102)
   ↳ /Users/sashagrinev/.gem/ruby/2.3.3/bin/rake:22
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/sashagrinev/.gem/ruby/2.3.3/bin/rake:22
+<<<<<<< HEAD
+=======
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8012978063262898320)[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddRoleToUsers (20190123143729)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.8ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying DEFAULT 'member' NOT NULL[0m
+  ↳ db/migrate/20190123143729_add_role_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123143729"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddLastNameToUsers (20190123143739)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying NOT NULL[0m
+  ↳ db/migrate/20190123143739_add_last_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123143739"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddFirstNameToUsers (20190123143748)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying NOT NULL[0m
+  ↳ db/migrate/20190123143748_add_first_name_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123143748"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8012978063262898320)[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for 127.0.0.1 at 2019-01-23 09:51:24 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.6ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 09:51:28 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Started GET "/" for 127.0.0.1 at 2019-01-23 09:51:42 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/sashagrinev/GroupProject/book-reviews/public/packs
+Completed 200 OK in 51676ms (Views: 51673.7ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/sashagrinev/GroupProject/book-reviews/public/packs
+Completed 200 OK in 55838ms (Views: 55833.4ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/sashagrinev/GroupProject/book-reviews/public/packs
+Completed 200 OK in 36991ms (Views: 36987.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 09:52:51 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 327ms (Views: 291.6ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 09:52:57 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 09:53:29 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJb9HceORsNhPk6tnR7Hh5Kin2G9lIBLP8EDB7QaZ+zlYHEjlvd7dhQOuV7i0OvdAV+SPy59uiikNli2lZ0zgw==", "user"=>{"email"=>"something@other.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (27.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "something@other.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 402ms (Views: 149.7ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 10:08:59 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 10:09:02 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 10:09:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 135ms (Views: 99.5ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 10:09:09 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 99ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 10:12:08 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 10:12:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (876.5ms)
+Completed 500 Internal Server Error in 896ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name_field' for #<ActionView::Helpers::FormBuilder:0x00007ffe4bb035f0>):
+     5: 
+     6:   <div class="field">
+     7:     <%= f.label :first_name %><br />
+     8:     <%= f.first_name_field :first_name, autofocus: true, autocomplete: "first name" %>
+     9:   </div>
+    10: 
+    11:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:8:in `block in _app_views_devise_registrations_new_html_erb___544702872215483854_70365087403500'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___544702872215483854_70365087403500'
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 10:12:46 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (649.7ms)
+Completed 500 Internal Server Error in 668ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `field' for #<ActionView::Helpers::FormBuilder:0x00007ffe4a1506d0>
+Did you mean?  fields):
+     5: 
+     6:   <div class="field">
+     7:     <%= f.label :first_name %><br />
+     8:     <%= f.field :first_name, autofocus: true, autocomplete: "first name" %>
+     9:   </div>
+    10: 
+    11:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:8:in `block in _app_views_devise_registrations_new_html_erb___544702872215483854_70365059212540'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___544702872215483854_70365059212540'
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 10:15:40 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 241ms (Views: 228.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 10:16:10 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 183ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 12:33:50 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cC+GhDIc5eaM397yC8ww/mp1gj4M5YdmN4mVikzFsXoB2Qq6Y2XYU/nvKQF0Ahyk+YiPYJ8MvQWsfs47bULlFQ==", "user"=>{"first_name"=>"Alex", "last_name"=>"My", "email"=>"some@other.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "some@other.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Create (3.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "last_name", "first_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "some@other.com"], ["encrypted_password", "$2a$11$DThH4GZYjn/dSypfJkU8O.fAPykzXEV5.p48qKtvki.ZgKuUvOsBW"], ["created_at", "2019-01-23 17:33:50.459170"], ["updated_at", "2019-01-23 17:33:50.459170"], ["last_name", "My"], ["first_name", "Alex"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:33:50 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 160ms (Views: 144.6ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:34:00 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 89ms (Views: 85.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 12:34:02 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qSJJgE1DV3SPSOfUtmU+bip/aCC7C7JuxAebFoLWqIHY1MW+HDpqwfp4ECfJqxI0uYJlfijiiA1f8MCno1H87g=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:34:02 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 134ms (Views: 132.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 12:34:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 164ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 12:34:16 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5rMYtHNu1mmGCNHB3XiYAuRfrrEQb4L1JWrNR1VGl53tWcq2Cby0QSgse7hvw6HT3Aas2O/UlXTebFZ4wY1KQ==", "user"=>{"email"=>"some@other.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "some@other.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 317ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:34:16 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 14:50:55 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SCGmChEGK/doSIqKlM+gHdr+fXbU/lTGkA73W9yGWi05awSMRNhT3Cx7q5B0oM3Df4Yhk4S0yiXnVGDe7pvIhA=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 14:50:55 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 116ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 14:50:58 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 15:49:57 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 265ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 15:50:03 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (55.6ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 42.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar_cache' for #<User:0x00007ffe3fd63f18>):
+    25:   <div class="feild">
+    26:     <%= f.label :avatar do %>
+    27:      <%= f.file_field :avatar %>
+    28:      <%= f.hidden_field :avatar_cache %>
+    29:     <% end %>
+    30:   </div>
+    31: 
+  
+app/views/devise/registrations/new.html.erb:28:in `block (2 levels) in _app_views_devise_registrations_new_html_erb___544702872215483854_70365011487560'
+app/views/devise/registrations/new.html.erb:26:in `block in _app_views_devise_registrations_new_html_erb___544702872215483854_70365011487560'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___544702872215483854_70365011487560'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8012978063262898320)[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddAvatarToUsers (20190123211303)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar" character varying[0m
+  ↳ db/migrate/20190123211303_add_avatar_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123211303"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8012978063262898320)[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:23:53 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4015ms (Views: 4009.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 16:24:03 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 267ms (Views: 226.0ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 16:24:47 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxdgRAZZNDAm34oBJnvPiECrl/qiX2OS9i0uL39juhNC1UPg5csG+uHVK8pcvWIJjzpUmGqaoNxj6DYYN/qHVw==", "user"=>{"first_name"=>"'aosihuf", "last_name"=>"aw/kejbdfu", "email"=>"wbdkqug@kdsfg.com", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007faf3b9e25e0 @tempfile=#<Tempfile:/var/folders/dd/xcjn9blj43l38yhxc4555ppw0000gr/T/RackMultipart20190123-31340-1raydub.jpg>, @original_filename="IMG_20181001_004847_490.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"IMG_20181001_004847_490.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar_cache"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (11.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wbdkqug@kdsfg.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "last_name", "first_name", "avatar") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "wbdkqug@kdsfg.com"], ["encrypted_password", "$2a$11$Qz.rQ4CFplFnU1W/e7Vfg.NKn6ulJr3ZYKZkB5QtlYMF1yUN8jdKe"], ["created_at", "2019-01-23 21:24:47.643985"], ["updated_at", "2019-01-23 21:24:47.643985"], ["last_name", "aw/kejbdfu"], ["first_name", "'aosihuf"], ["avatar", "IMG_20181001_004847_490.jpg"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (80.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms (ActiveRecord: 93.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:24:47 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 344ms (Views: 332.7ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 16:25:46 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/Users/sashagrinev/GroupProject/book-reviews/app/views/devise/registrations/edit.html.erb:66: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/devise/registrations/edit.html.erb:66: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 16:26:29 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2019-01-23 16:27:05 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zyou9/1fXgpdzsnBrCT76+V5qiFa7VFj5qDxE1cYzz++6A1THs1swJrEaArW4lZqKuhpQ5Ioki1zZekkH4Hyew==", "user"=>{"first_name"=>"'aosihuf", "last_name"=>"aw/kejbdfu", "email"=>"wbdkqug@kdsfg.com", "remove_avatar"=>"1", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007faf4155e428 @tempfile=#<Tempfile:/var/folders/dd/xcjn9blj43l38yhxc4555ppw0000gr/T/RackMultipart20190123-31340-frfdwq.jpg>, @original_filename="AirBrush_20181210094116.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"AirBrush_20181210094116.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar_cache"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:12
+Unpermitted parameters: :password_confirmation, :current_password
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 275ms (Views: 96.1ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2019-01-23 16:27:17 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pBk02Nf+K0zT62Pf5AJFipou8KTbMa1P9m4sIF3ZS8/Ukd3gM3KZ/RFDEQFVqSX5fl4oFupBfuqHKCHye5Yaw==", "user"=>{"first_name"=>"'aosihuf", "last_name"=>"aw/kejbdfu", "email"=>"wbdkqug@kdsfg.com", "remove_avatar"=>"1", "avatar_cache"=>"1548278825-31340-0002-8708/AirBrush_20181210094116.jpg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:12
+Unpermitted parameters: :password_confirmation, :current_password
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 253ms (Views: 84.1ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2019-01-23 16:27:56 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DorJno/zmZus/Ri+JaWvZxiMvqls5Ax8aRjmwL6aSzPXSOo6bGGrUWv3uXVfYwLm1x19y6QhzzL83f739gN2dw==", "user"=>{"first_name"=>"'aosihuf", "last_name"=>"aw/kejbdfu", "email"=>"wbdkqug@kdsfg.com", "remove_avatar"=>"1", "avatar_cache"=>"1548278825-31340-0002-8708/AirBrush_20181210094116.jpg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:12
+Unpermitted parameters: :password_confirmation, :current_password
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 401ms (Views: 89.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 16:28:17 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y/vIjkjx5DRRun/QYQzj0IybvCVKXEm1KpQsE/beqKm6Oesqq2PW/paw3hsbyk5RQwp/R4KZivu/UTQkvkeV7Q=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:28:17 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 16:28:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-23 16:28:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ylfTWH+vrY61nzVETOyGVMTKkf9eXWgqIUJhg9vMc17LBD3ZilregBGMNHpv/h1x26g/V2oN/EhHWvMMvTUt+A==", "user"=>{"email"=>"wbdkqug@kdsfg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "wbdkqug@kdsfg.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:28:40 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 106ms (Views: 102.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-23 16:30:34 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 188ms (Views: 138.6ms | ActiveRecord: 14.1ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2019-01-23 16:30:51 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AcpHXqNHM5b7kSud2fcftc+QspXYRy9vOBveZqXD7oTEyugvLklu1ip4snMH9Sk8X8JAV/aEg0a1aKnlhJDp7Q==", "user"=>{"first_name"=>"'aosihuf", "last_name"=>"aw/kejbdfu", "email"=>"wbdkqug@kdsfg.com", "remove_avatar"=>"0", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007faf411d04f0 @tempfile=#<Tempfile:/var/folders/dd/xcjn9blj43l38yhxc4555ppw0000gr/T/RackMultipart20190123-31340-cxkhlz.jpg>, @original_filename="AirBrush_20181210094116.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"AirBrush_20181210094116.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar_cache"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:12
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/database_authenticatable.rb:76
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "avatar" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["avatar", "AirBrush_20181210094116.jpg"], ["updated_at", "2019-01-23 21:30:51.937749"], ["id", 2]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/database_authenticatable.rb:76
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/database_authenticatable.rb:76
+Redirected to http://localhost:3000/
+Completed 302 Found in 185ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:30:51 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 180ms (Views: 176.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:43:46 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 195ms (Views: 166.0ms | ActiveRecord: 20.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 16:43:54 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OIzJrA/lUDgTdmKTlcLzPfGjGpnhy3pTtjrgb0WNLLX9jGbdgusNeMKf+31LwMW0YfHoW88I1no7SZfsZN4r3A=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:43:54 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-23 16:43:56 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-23 16:44:11 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/VCP0k136WLLUxmgsS/C2ddG0wji+8SUFJCHEgKAi9AdYeLrdBS9zJ4n5mcBsPJ7pafQLOpKXAJL35rSS3F4VA==", "user"=>{"first_name"=>"ekwjbf", "last_name"=>"ewkb", "email"=>"wekjfb@ewjkbf.com", "avatar_cache"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wekjfb@ewjkbf.com"], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "last_name", "first_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "wekjfb@ewjkbf.com"], ["encrypted_password", "$2a$11$a9YnpkcPcFPIMbT0yUPYsuYGpVomO0jxFkVJHrtcLXEoDCuunafKe"], ["created_at", "2019-01-23 21:44:11.190599"], ["updated_at", "2019-01-23 21:44:11.190599"], ["last_name", "ewkb"], ["first_name", "ekwjbf"]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/app/controllers/devise/registrations_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:44:11 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 88ms (Views: 84.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-23 16:45:51 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NtBZK9fkj6YAAEn7FAOJIxsmHZjNe1UgRlWRSKwPYBfW4TQS7ofbCFV0tjyknLmBaccevMXKzbYZGoyI5f6Tkw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/sashagrinev/.gem/ruby/2.4.5/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 148.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 16:45:52 -0500
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 224ms (Views: 221.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-23 16:45:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 94ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+>>>>>>> add carrierwave functionality to user
