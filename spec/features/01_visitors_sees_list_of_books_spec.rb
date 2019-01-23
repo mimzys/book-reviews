@@ -12,9 +12,13 @@ feature "visitor sees a list of books" do
 
     visit root_path
 
+    expect(page).to have_content "All Books"
     expect(page).to have_content harry_potter.name
     expect(page).to have_content lord_of_the_rings.name
     expect(page).to have_content game_of_thrones.name
+    expect(page).to have_link harry_potter.name
+    expect(page).to have_link lord_of_the_rings.name
+    expect(page).to have_link game_of_thrones.name
 
   end
 end
