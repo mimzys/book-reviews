@@ -6,9 +6,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string :isbn, null: false
       t.text :description, null: false
       t.date :publication_date, null: false
-
       t.timestamps null: false
-
     end
   end
 end

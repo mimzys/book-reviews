@@ -2,7 +2,7 @@
 
 <ul>
   <% @books.each do |book| %>
-  <li class="book_box"><%= link_to book.name, book_path(book) %></li>
+  <li class="book_box"><%= link_to book.name %></li>
   <br>
   <% end %>
 </ul>
