@@ -60,3 +60,9 @@ gem 'devise'
 gem 'foundation-rails', '~> 5.0'
 gem 'webpacker', '~> 3.3'
 gem 'carrierwave', '~> 1.0'
+gem 'fog', '~> 2.1.0'
+gem 'fog-aws'
+
+group :development, :test do
+  gem "dotenv-rails"
+end
