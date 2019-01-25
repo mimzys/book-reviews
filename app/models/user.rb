@@ -11,7 +11,7 @@ class User < ApplicationRecord
     validates_integrity_of  :avatar
     validates_processing_of :avatar
   end
-  
+
   def admin?
     role == "admin"
   end
