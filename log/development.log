@@ -174,16 +174,16 @@ Processing by HomesController#index as HTML
 Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
      5: <h2> All Books </h2>
-     6: 
+     6:
      7: <ul>
      8:   <% @books.each do |book| %>
      9:   <li><%= link_to book.name, book_path(book) %></li>
     10:   <% end %>
     11: </ul>
-  
+
 app/views/homes/index.html.erb:8:in `_app_views_homes_index_html_erb___536758547957355977_70207958069420'
 Started GET "/" for 127.0.0.1 at 2019-01-23 09:53:17 -0500
 Processing by BooksController#index as HTML
@@ -194,17 +194,17 @@ Processing by BooksController#index as HTML
 Completed 500 Internal Server Error in 273ms (ActiveRecord: 10.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `book_path' for #<#<Class:0x007fb5206d0ab0>:0x007fb5215c2be0>
 Did you mean?  books_path
                root_path):
-    2: 
+    2:
     3: <ul>
     4:   <% @books.each do |book| %>
     5:   <li><%= link_to book.name, book_path(book) %></li>
     6:   <% end %>
     7: </ul>
-  
+
 app/views/books/index.html.erb:5:in `block in _app_views_books_index_html_erb___4063042542913634872_70207954913700'
 app/views/books/index.html.erb:4:in `_app_views_books_index_html_erb___4063042542913634872_70207954913700'
 Started GET "/" for 127.0.0.1 at 2019-01-23 09:53:31 -0500
@@ -419,5 +419,3 @@ Processing by BooksController#show as HTML
   Rendering books/show.html.erb within layouts/application
   Rendered books/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 69ms (Views: 65.7ms | ActiveRecord: 0.0ms)
-
-
