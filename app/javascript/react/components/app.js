@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Route, IndexRoute, Router, browserHistory } from 'react-router';
+import BooksShowContainer from '../containers/BooksShowContainer';
 
-export const App = (props) => {
-  return (<h1>Make It So React</h1>)
-}
+ const App = (props) => {
+   return (
+     <Router history={browserHistory}>
+       <Route path='/books/:id' component={BooksShowContainer} />
+     </Router>
+   );
+ }
 
-export default App
+export default App;

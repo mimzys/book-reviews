@@ -2,13 +2,20 @@ import { shallow, mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
 import 'jasmine-ajax';
+import fetchPonyfill from "fetch-ponyfill"
+const {fetch, Request, Response, Headers} = fetchPonyfill({});
 
 Object.assign(global, {
   jasmineEnzyme,
   mount,
   React,
   shallow,
-});
+  fetch,
+  Request,
+  Response,
+  Headers
+  }
+);
 
 beforeEach(() => {
   jasmineEnzyme();
@@ -20,7 +27,7 @@ let requireAll = requireContext => {
 };
 
 // require all js files except testHelper.js in the test folder
-requireAll(require.context('./', true, /^((?!testHelper).)*\.jsx?$/));
+requireAll(require.context('./', true, /testHelper.js/));
 
 // require all js files except main.js in the src folder
 requireAll(require.context('../../app/javascript', true, /^((?!application).)*\.jsx?$/));
