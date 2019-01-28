@@ -1,34 +1,34 @@
-// import App from './app/javascript/react/components/app'
-// import fetchMock from 'fetch-mock';
-//
-// beforeEach(() => {
-//   books = [
-//     {id: 1, name: 'Check the weather'}
-//   ]
-//   fetchMock.get('/api/v1/books/1', {
-//     status: 200,
-//     body: book
-//   });
-//   wrapper = mount(
-//     <BooksShowContainer />
-//   )
-// })
-//
-// afterEach(fetchMock.restore)
-//
-// describe('listing', () => {
-//   // it('renders an li', () => {
-//   //   expect(wrapper.find('li')).toBePresent()
-//   // })
-//   //
-//   // it('renders a list item for each item returned from the api call', (done) => {
-//   //   setTimeout(() => {
-//   //     expect(wrapper.find('li').length).toEqual(books.length)
-//   //     expect(wrapper.find('li').text()).toEqual(books[0].name)
-//   //     done()
-//   //   }, 0)
-//   // })
-//   it('should return true', () => {
-//     expect(true).toEqual(true);
-//   })
-// })
+import App from '../../../../app/javascript/react/components/app';
+import BooksShowTile from '../../../../app/javascript/react/components/BookShowTile';
+import fetchMock from 'fetch-mock';
+
+describe('BooksShowContainer', () => {
+  let wrapper, books;
+
+  beforeEach(() => {
+    books = [{id: 1, name: "Check the weather", author: "john doe", publication_date: "Jan-01-2001",isbn: 12345, description: "best book ever" }]
+
+    fetchMock.get('/api/v1/books/1', {
+      status: 200,
+      body: books[0]
+    });
+
+    wrapper = mount(
+      <BooksShowTile
+        params = {{id:1}}
+      />);
+  });
+
+  afterEach(fetchMock.restore)
+
+    it('renders a div', () => {
+      expect(wrapper.find('div')).toBePresent()
+    })
+
+    it('renders a BookShowTile', (done) => {
+      setTimeout(() => {
+        expect(wrapper.find('BookShowTile').length).toEqual(books.length)
+        done()
+      }, 0)
+    })
+  })
