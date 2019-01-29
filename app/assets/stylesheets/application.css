@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ *= require font-awesome
 
  */
 body{
@@ -78,6 +79,17 @@ img.img-responsive{
   border-bottom-width: thin;
   border-top-width: thin;
   font-size: 25px;
+}
+
+.review{
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 2px;
+  padding: 10px;
+  border-bottom-width: thin;
+  border-top-width: thin;
+  font-size: 25px;
+  border-color: red;
   margin: 20px;
 }
 

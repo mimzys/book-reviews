@@ -27,24 +27,24 @@ import React from 'react';
   });
 
   describe("displays all book elements", () => {
-    it("renders a div", () => {
-      expect(wrapper.find("div")).toBePresent()
+    it("renders a div with class book", () => {
+      expect(wrapper.find("div.book")).toBePresent()
     })
 
-    it("renders a title class", () => {
-      expect(wrapper.find(".title").text()).toBe("Best Name")
+    it("renders an h1 tag with class title and props.name as text", () => {
+      expect(wrapper.find("h1.title").text()).toBe(book.name)
     })
 
-    it("renders an author class", () => {
-      expect(wrapper.find(".author").text()).toBe("Author:Best Author")
+    it("renders a p tag with class author and 'Authos:' props.author text", () => {
+      expect(wrapper.find("p.author").text()).toBe(`Author: ${book.author}`)
     })
 
-    it("renders a pub_date class", () => {
-      expect(wrapper.find(".pub_date").text()).toBe("Publication Date: Best Published on")
+    it("renders a p tag with class pub_date and text 'Publication Date:' props.publication_date text", () => {
+      expect(wrapper.find("p.pub_date").text()).toBe(`Publication Date: ${book.publication_date}`)
     })
 
-    it("renders an description class", () => {
-      expect(wrapper.find(".description").text()).toBe("Best description")
+    it("renders a p tag with class description and text props.description", () => {
+      expect(wrapper.find(".description").text()).toBe(book.description)
     })
   })
 })
