@@ -1,8 +1,6 @@
 class Book < ApplicationRecord
-  validates :name, presence: true
-  validates :author, presence: true
-  validates :isbn, presence: true
-  validates :description, presence: true
-  validates :publication_date, presence: true
+  validates_presence_of :name, :author, :isbn, :description, :publication_date
+  validates_numericality_of :isbn
+  validates_length_of :isbn, minimum: 10, maximum: 13
   has_many :reviews
 end
