@@ -62,6 +62,7 @@ gem 'webpacker', '~> 3.3'
 gem 'carrierwave', '~> 1.0'
 gem 'fog', '~> 2.1.0'
 gem 'fog-aws'
+gem 'will_paginate', '~> 3.0.4'
 gem 'font-awesome-rails'
 
 group :development, :test do
