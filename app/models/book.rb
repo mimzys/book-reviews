@@ -4,5 +4,5 @@ class Book < ApplicationRecord
   validates :isbn, presence: true
   validates :description, presence: true
   validates :publication_date, presence: true
-  
+  has_many :reviews
 end
