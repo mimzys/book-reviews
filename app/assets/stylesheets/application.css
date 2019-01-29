@@ -15,6 +15,13 @@
  *= require foundation_and_overrides
 
  */
+
+ img.img-responsive {
+     max-width: auto;
+     height: 40px;
+     padding-top: 5px;
+ }
+
 .book_box{
   width: 200px;
   border-style: solid;
