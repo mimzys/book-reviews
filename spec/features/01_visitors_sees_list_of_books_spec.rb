@@ -9,19 +9,19 @@ feature "visitor sees a list of books" do
     harry_potter = Book.create(
       name:"Harry Potter",
       author:"J.K Rowling",
-      isbn:"01234567",
+      isbn:"1234567561230",
       description:"All three of them demonstrate Loyalty and Bravery. Hermione Granger's unique traits are being logical, close-minded, blunt, and book smart. Harry Potter's unique traits are Arrogant, instinctive, obsessive (Hermione is too I suppose), and intimidating (Hermione, again is too, but in a different way.).",
       publication_date: "Jan-01-2001");
     lord_of_the_rings = Book.create(
       name:"Lord of the Rings",
       author:"J.K Rowling",
-      isbn:"01234567",
+      isbn:"1234567431063",
       description:"All three of them demonstrate Loyalty and Bravery. Hermione Granger's unique traits are being logical, close-minded, blunt, and book smart. Harry Potter's unique traits are Arrogant, instinctive, obsessive (Hermione is too I suppose), and intimidating (Hermione, again is too, but in a different way.).",
       publication_date: "Jan-01-2001");
     game_of_thrones = Book.create(
       name:"Game of Thrones",
       author:"J.K Rowling",
-      isbn:"01234567",
+      isbn:"0123456741052",
       description:"All three of them demonstrate Loyalty and Bravery. Hermione Granger's unique traits are being logical, close-minded, blunt, and book smart. Harry Potter's unique traits are Arrogant, instinctive, obsessive (Hermione is too I suppose), and intimidating (Hermione, again is too, but in a different way.).",
       publication_date: "Jan-01-2001");
 
@@ -34,5 +34,6 @@ feature "visitor sees a list of books" do
     expect(page).to have_link harry_potter.name
     expect(page).to have_link lord_of_the_rings.name
     expect(page).to have_link game_of_thrones.name
+    expect(page).to have_link "Add New Book"
   end
 end
