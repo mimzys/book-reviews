@@ -1,23 +1,21 @@
-require 'pry'
 class Api::V1::ReviewsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
-    before_action :authorize_user, except: [:show, :index]
+  before_action :authorize_user, except: [:show, :index]
 
   def create
     review = Review.create(review_params)
     review.user = current_user
-    if review.save
-      render json: review
-    else
-      render json: {error: review.errors.full_messages}, status: :unprocessable_entity
-    end
+      if review.save
+        render json: review
+      else
+        render json: {error: review.errors.full_messages}, status: :unprocessable_entity
+      end
   end
 
   def show
     review = Review.find(params[:id])
     render json: review
   end
-
 
   private
 
@@ -32,6 +30,6 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def current_user_access
-   current_user.id == Review.find(params[:id]).user_id
+    current_user.id == Review.find(params[:id]).user_id
   end
 end

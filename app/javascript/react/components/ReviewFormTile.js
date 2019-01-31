@@ -5,7 +5,7 @@ class ReviewFormTile extends Component{
     super(props);
     this.state={
       rating:1,
-      comment:"",
+      comment:""
     }
     this.handleChange=this.handleChange.bind(this)
   }
@@ -28,34 +28,26 @@ class ReviewFormTile extends Component{
     }
     return(
       <div>
-      <div className="Review-Show">
-        <form>
-        <label>Ratings:
-        <select name='rating' value={this.state.rating} onChange={this.handleChange}>
-         <option value='0' hidden></option>
-         <option value='1'>1 </option>
-         <option value='2'>2 </option>
-         <option value='3'>3 </option>
-         <option value='4'>4 </option>
-         <option value='5'>5 </option>
-         </select>
-        </label>
-        <label>Comments:
-          <input type="text" name="comment" onChange={this.handleChange}/>
-        </label>
-          <input type="submit" value="Submit" onClick={handleSubmit}/>
-        </form>
-      </div>
+        <div className="form">
+          <form>
+            <label>Ratings:</label>
+            <select name='rating' value={this.state.rating} onChange={this.handleChange}>
+               <option value='0' hidden></option>
+               <option value='1'>1 </option>
+               <option value='2'>2 </option>
+               <option value='3'>3 </option>
+               <option value='4'>4 </option>
+               <option value='5'>5 </option>
+             </select>
+            <label>Comments:</label>
+            <textarea name="comment" cols="40" onChange={this.handleChange} rows="5"></textarea>
+            <input type="submit" value="Submit" onClick={handleSubmit}/>
+          </form>
+        </div>
       </div>
 
     )
   }
-
 }
-
-
-
-
-
 
 export default ReviewFormTile

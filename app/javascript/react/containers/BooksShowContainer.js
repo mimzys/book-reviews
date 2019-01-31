@@ -13,7 +13,7 @@ class BooksShowContainer extends Component {
       description: "",
       publication_date: "",
       reviews: [],
-      book_id: ""
+      book_id: null
    };
    this.postReview=this.postReview.bind(this)
    this.handleSubmit= this.handleSubmit.bind(this)
@@ -70,12 +70,10 @@ class BooksShowContainer extends Component {
       likes: 0,
       dislikes: 0
     }
-    console.log(review_format)
     this.postReview(formPayLoad)
   }
 
   render(){
-    console.log(this.state)
     let reviewsArray
     if (this.state.reviews) {
      reviewsArray = this.state.reviews.map((review, index) => {

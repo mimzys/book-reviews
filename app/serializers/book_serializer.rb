@@ -1,10 +1,7 @@
-
-
 class BookSerializer < ActiveModel::Serializer
   attributes :id, :name, :author, :reviews, :description, :publication_date
 
-
-  def reviews
+def reviews
     reviews=[]
     object.reviews.each do |review|
       reviews << {
