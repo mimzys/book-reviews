@@ -29,7 +29,6 @@ class ReviewFormTile extends Component{
     return(
       <div>
       <div className="Review-Show">
-        <h4>I am in Review Form Tile</h4>
         <form>
         <label>Ratings:
         <select name='rating' value={this.state.rating} onChange={this.handleChange}>

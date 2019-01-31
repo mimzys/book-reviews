@@ -102,3 +102,8 @@ img.img-responsive{
   margin: 20px;
   font-size: 20px;
 }
+
+.heading{
+  text-align: center;
+  color: red;
+}

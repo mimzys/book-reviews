@@ -159,31 +159,44 @@ books.each do |book|
   )
 end
 
+admin_user = User.create!(
+  first_name: "Admin",
+  last_name: "User",
+  email: "admin@user.com",
+  role: "admin",
+  password: "adminuser"
+)
+
 reviews = [
   {
     book_id: Book.first.id,
     rating: 4,
-    comment: "not bad at all"
+    comment: "not bad at all",
+    user_id: admin_user.id
   },
   {
     book_id: Book.first.id,
     rating: 3,
-    comment: "best book everrrrrrrrr"
+    comment: "best book everrrrrrrrr",
+    user_id: admin_user.id
   },
   {
     book_id: Book.first.id,
     rating: 4,
-    comment: "i likey"
+    comment: "i likey",
+    user_id: admin_user.id
   },
   {
     book_id: Book.second.id,
     rating: 5,
-    comment: "eyyyyyyyyyy"
+    comment: "eyyyyyyyyyy",
+    user_id: admin_user.id
   },
   {
     book_id: Book.second.id,
     rating: 4,
-    comment: "BEST"
+    comment: "BEST",
+    user_id: admin_user.id
   }
 ]
 
@@ -191,6 +204,7 @@ reviews.each do |review|
   Review.create!(
     book_id: review[:book_id],
     rating: review[:rating],
-    comment: review[:comment]
+    comment: review[:comment],
+    user_id: review[:user_id]
   )
 end

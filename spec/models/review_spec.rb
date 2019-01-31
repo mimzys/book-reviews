@@ -17,4 +17,5 @@ describe Review do
   it { should_not have_valid(:book_id).when(nil, "") }
 
   it { should belong_to(:book) }
+  it { should belong_to(:user) }
 end

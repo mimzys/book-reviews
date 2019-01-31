@@ -14,7 +14,6 @@ class BooksShowContainer extends Component {
       publication_date: "",
       reviews: [],
       book_id: ""
-
    };
    this.postReview=this.postReview.bind(this)
    this.handleSubmit= this.handleSubmit.bind(this)
@@ -27,11 +26,11 @@ class BooksShowContainer extends Component {
         return responseBody
       }).then(responseBody => {
         this.setState({
-          name: responseBody.name,
-          author: responseBody.author,
-          description: responseBody.description,
-          publication_date: responseBody.publication_date,
-          reviews: responseBody.reviews,
+          name: responseBody.book.name,
+          author: responseBody.book.author,
+          description: responseBody.book.description,
+          publication_date: responseBody.book.publication_date,
+          reviews: responseBody.book.reviews,
           book_id: bookId
         })
       })
@@ -76,6 +75,7 @@ class BooksShowContainer extends Component {
   }
 
   render(){
+    console.log(this.state)
     let reviewsArray
     if (this.state.reviews) {
      reviewsArray = this.state.reviews.map((review, index) => {
