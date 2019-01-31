@@ -37,12 +37,8 @@ class BooksShowContainer extends Component {
       })
     }
 
-
-
-
-
     postReview(review){
-      fetch(`/api/v1/reviews/`, {
+      fetch(`/api/v1/reviews`, {
         method: 'POST',
         body: JSON.stringify(review),
         credentials: 'same-origin',
@@ -67,27 +63,17 @@ class BooksShowContainer extends Component {
       })
     }
 
-
-
   handleSubmit(formPayLoad){
     let review_format = {
       book_id: this.state.id,
       rating: formPayLoad.rating,
-      comment: formPayLoad.comment
+      comment: formPayLoad.comment,
+      likes: 0,
+      dislikes: 0
     }
     console.log(review_format)
     this.postReview(formPayLoad)
   }
-
-  // handleSubmit(event){
-  //   event.preventDefault()
-  //   let formPayLoad={
-  //     id:'',
-  //     rating: this.state.review["rating"]
-  //     comment
-  //   }
-  // }
-
 
   render(){
     let reviewsArray

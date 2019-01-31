@@ -4,6 +4,10 @@ class BooksController < ApplicationController
     @books = Book.paginate(page: params[:page], per_page: 10)
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def new
     @book = Book.new
   end
