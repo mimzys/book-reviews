@@ -54,7 +54,7 @@ img.img-responsive{
 
 .flex-container > li {
   background-color: #f1f1f1;
-  border: 3px solid black;
+  border: 3px solid grey;
   width: 300px;
   height: 300px;
   margin: 10px;
@@ -68,7 +68,7 @@ img.img-responsive{
   font-size: 40px;
   font-style: bold;
   color: #5D0606;
-  margin: 20px;
+  margin: 30px;
 }
 
 .description{
@@ -79,6 +79,7 @@ img.img-responsive{
   border-bottom-width: thin;
   border-top-width: thin;
   font-size: 25px;
+  margin: 30px;
 }
 
 .review{
@@ -89,16 +90,75 @@ img.img-responsive{
   border-bottom-width: thin;
   border-top-width: thin;
   font-size: 25px;
-  border-color: red;
+  border-color: black;
   margin: 20px;
 }
 
 .author{
-  margin: 20px;
+  margin: 30px;
   font-size: 20px;
 }
 
 .pub_date{
-  margin: 20px;
+  margin: 30px;
   font-size: 20px;
+}
+
+.heading{
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+  font-style:oblique;
+  background-color: #bcbc9c;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.new-book{
+  margin-left: 760px;
+  width: 300px;
+  background-color: #3c3d35;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid black;
+  color: #67A3C0;
+  margin-top: 30px;
+}
+
+.form{
+
+  width: 400px;
+  margin-left: 720px;
+  margin-top: 40px;
+  border: medium solid grey;
+  padding: 30px;
+  background-color: #f5f7dc;
+  border-radius: 10px;
+
+}
+
+.form1{
+  width: 400px;
+  margin-left: 720px;
+  margin-top: 40px;
+  border: medium solid #c6b9b4;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: white;
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label{
+  font-weight: bold;
 }

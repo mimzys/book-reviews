@@ -23,6 +23,8 @@ RSpec.describe User, type: :model do
       it { should_not have_valid(:email).when(nil, '', 'suzy') }
       it { should_not have_valid(:encrypted_password).when(nil, '', '12345') }
     end
+
+      it { should have_many(:reviews) }
   end
 
   describe "#admin?" do

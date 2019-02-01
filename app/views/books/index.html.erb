@@ -1,4 +1,4 @@
-<h2> All Books </h2>
+<h2 class="heading"> All Books </h2>
 
 <div class="next-page">
   <%= will_paginate %>
@@ -10,5 +10,6 @@
   <br>
   <% end %>
 </ul>
-
+<div class="new-book">
 <%= link_to "Add New Book", new_book_path %>
+</div>
