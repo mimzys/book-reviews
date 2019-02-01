@@ -18,7 +18,7 @@
  */
 body{
   background: url("book.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
 }
@@ -71,27 +71,30 @@ img.img-responsive{
   margin: 30px;
 }
 
-.description{
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 2px;
-  padding: 10px;
-  border-bottom-width: thin;
-  border-top-width: thin;
-  font-size: 25px;
+.reviews_title{
+  font-style: bold;
+  color: #670000;
   margin: 30px;
 }
 
-.review{
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 2px;
+.description{
+  border-radius: 10px;
   padding: 10px;
-  border-bottom-width: thin;
-  border-top-width: thin;
-  font-size: 25px;
-  border-color: black;
-  margin: 20px;
+  font-size: 22px;
+  margin: 30px;
+  border: medium solid grey;
+  opacity: .8;
+  background-color: #FFFFFF;
+}
+
+.review{
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  margin: 30px;
+  border: medium solid grey;
+  opacity: .8;
+  background-color: #FFFFFF;
 }
 
 .author{
@@ -112,10 +115,11 @@ img.img-responsive{
   background-color: #bcbc9c;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 15px;
 }
 
 .new-book{
-  margin-left: 760px;
+  margin: auto;
   width: 300px;
   background-color: #3c3d35;
   text-align: center;
@@ -123,29 +127,52 @@ img.img-responsive{
   border: 3px solid black;
   color: #67A3C0;
   margin-top: 30px;
+  opacity: .9;
 }
 
 .form{
-
   width: 400px;
-  margin-left: 720px;
+  margin: auto;
   margin-top: 40px;
   border: medium solid grey;
   padding: 30px;
   background-color: #f5f7dc;
   border-radius: 10px;
-
+  opacity: .9;
 }
 
 .form1{
   width: 400px;
-  margin-left: 720px;
+  margin: auto;
   margin-top: 40px;
-  border: medium solid #c6b9b4;
+  border: medium solid grey;
   border-radius: 5px;
   padding: 15px;
   background-color: white;
+  opacity: .9;
 
+}
+
+.new_user{
+
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  border: medium solid grey;
+  padding: 30px;
+  background-color: #f5f7dc;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  opacity: .9;
+}
+
+.field{
+  width: 340px;
+}
+
+.sign-up{
+  text-align: center;
+  margin-top: 30px;
 }
 
 input[type=submit] {

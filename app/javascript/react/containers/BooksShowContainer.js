@@ -90,23 +90,28 @@ class BooksShowContainer extends Component {
   }
     return(
       <div>
-      <div>
-        <BookShowTile
-          key={this.props.params.id}
-          name={this.state.name}
-          author={this.state.author}
-          publication_date={this.state.publication_date}
-          description={this.state.description}
-        />
-      </div>
-      <div>
-        {reviewsArray}
-      </div>
-        <ReviewFormTile
-           key={this.props.params.id}
-           book_id={this.props.params.id}
-           handleSubmit={this.handleSubmit}
-        />
+        <div>
+          <BookShowTile
+            key={this.props.params.id}
+            name={this.state.name}
+            author={this.state.author}
+            publication_date={this.state.publication_date}
+            description={this.state.description}
+          />
+        </div>
+        <div className="reviews_title">
+          <h2>Reviews:</h2>
+        </div>
+        <div>
+          {reviewsArray}
+        </div>
+        <div>
+          <ReviewFormTile
+            key={this.props.params.id}
+            book_id={this.props.params.id}
+            handleSubmit={this.handleSubmit}
+          />
+        </div>
       </div>
     );
   }
