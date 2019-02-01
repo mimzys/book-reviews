@@ -68,7 +68,7 @@ img.img-responsive{
   font-size: 40px;
   font-style: bold;
   color: #5D0606;
-  margin: 20px;
+  margin: 30px;
 }
 
 .description{
@@ -79,6 +79,7 @@ img.img-responsive{
   border-bottom-width: thin;
   border-top-width: thin;
   font-size: 25px;
+  margin: 30px;
 }
 
 .review{
@@ -94,12 +95,12 @@ img.img-responsive{
 }
 
 .author{
-  margin: 20px;
+  margin: 30px;
   font-size: 20px;
 }
 
 .pub_date{
-  margin: 20px;
+  margin: 30px;
   font-size: 20px;
 }
 
@@ -125,10 +126,39 @@ img.img-responsive{
 }
 
 .form{
-  border: 3px, solid, black;
-  width: 300px;
-  margin-left: 760px;
-  margin-top: 40px;
-  padding: 10px;
 
+  width: 400px;
+  margin-left: 720px;
+  margin-top: 40px;
+  border: medium solid grey;
+  padding: 30px;
+  background-color: #f5f7dc;
+  border-radius: 10px;
+
+}
+
+.form1{
+  width: 400px;
+  margin-left: 720px;
+  margin-top: 40px;
+  border: medium solid #c6b9b4;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: white;
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label{
+  font-weight: bold;
 }

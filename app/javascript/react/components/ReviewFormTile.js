@@ -28,7 +28,7 @@ class ReviewFormTile extends Component{
     }
     return(
       <div>
-        <div className="form">
+        <div className="form1">
           <form>
             <label>Ratings:</label>
             <select name='rating' value={this.state.rating} onChange={this.handleChange}>
