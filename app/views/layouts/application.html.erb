@@ -21,6 +21,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
+          <li><a><%="Welcome, #{current_user.first_name}!"%></a></li>
           <% if current_user.avatar.url%>
             <li><img src="<%=current_user.avatar.url%>" class="img-responsive"></li>
           <% end %>
