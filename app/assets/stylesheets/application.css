@@ -175,6 +175,10 @@ img.img-responsive{
   margin-top: 30px;
 }
 
+.dev-lin{
+  text-align: center;
+}
+
 input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
